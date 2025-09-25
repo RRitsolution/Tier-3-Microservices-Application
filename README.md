@@ -54,7 +54,7 @@ Login to DB container:
 
 docker exec -it <db-container-id> /bin/bash
 
-mysql -u root -p   // It will promt for password pass root
+mysql -u root -p   // It will promt for password -root
 
 mysql> SHOW DATABASES;
 +--------------------+
@@ -69,12 +69,16 @@ mysql> SHOW DATABASES;
 
 mysql> USE peopledb;
 
+
 mysql> SHOW TABLES;
 Empty set (0.00 sec)
 
 mysql> CREATE TABLE people (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(10), age INT);
 
+
+
 mysql> INSERT INTO people (name,age) VALUES ("jai",35), ("ram",30);
+
 Query OK, 2 rows affected (0.04 sec)
 Records: 2  Duplicates: 0  Warnings: 0
 
